@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Silme / Account Deletion - Cell Conquest</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        /* Dil Seçici Butonlar */
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background: #f1f3f4;
+            color: #5f6368;
+            border: 1px solid #dadce0;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        .lang-btn:hover {
+            background: #e8eaed;
+        }
+        .lang-btn.active {
+            background: #1a73e8;
+            color: #ffffff;
+            border-color: #1a73e8;
+        }
+        h1 { color: #1a73e8; font-size: 24px; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 0; }
+        h2 { color: #202124; font-size: 18px; margin-top: 25px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .highlight-box {
+            background-color: #e8f0fe;
+            border-left: 4px solid #1a73e8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        a { color: #1a73e8; word-break: break-all; }
+        /* Varsayılan olarak İngilizce içerik gizli */
+        .lang-en { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- DİL DEĞİŞTİRME BUTONLARI -->
+        <div class="lang-switch">
+            <button class="lang-btn active" id="btn-tr" onclick="setLanguage('tr')">TR</button>
+            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+        </div>
+
+        <!-- TÜRKÇE İÇERİK -->
+        <div id="content-tr" class="lang-tr">
+            <h1>Cell Conquest - Hesap ve Veri Silme Talebi</h1>
+            <p>Geliştirici: <strong>Dravex Studio</strong></p>
+            
+            <p>
+                <strong>Cell Conquest</strong> uygulamasındaki hesabınızı ve bu hesapla ilişkili tüm verilerinizi silmek istiyorsanız, e-posta yoluyla silme talebinde bulunabilirsiniz.
+            </p>
+
+            <h2>1. Hesap Silme Talebi Nasıl İletilir?</h2>
+            <div class="highlight-box">
+                <p>Hesabınızın ve ilişkili verilerinizin silinmesini talep etmek için:</p>
+                <p>Uygulamaya kayıtlı e-posta adresinizden <strong><a href="mailto:ahmetkemal608@gmail.com">ahmetkemal608@gmail.com</a></strong> adresine <em>"Hesap Silme Talebi"</em> konu başlığıyla e-posta gönderebilirsiniz.</p>
+                <p>E-postanızda lütfen kullanıcı adınızı veya uygulamaya kayıtlı e-posta adresinizi açıkça belirtiniz.</p>
+            </div>
+
+            <h2>2. Silinen Veri Türleri</h2>
+            <p>Hesap silme talebiniz onaylandığında aşağıdaki veriler sistemlerimizden kalıcı olarak silinir:</p>
+            <ul>
+                <li>Kullanıcı profili bilgileri (Ad, Soyad, Kullanıcı Adı, E-posta adresi)</li>
+                <li>OAuth doğrulama kimlikleri ve jetonları (Google / Facebook / Apple ile giriş verileri)</li>
+                <li>Uygulama içi kayıtlar, veriler ve tercihler</li>
+                <li>Profil fotoğrafı ve yüklenen tüm içerikler</li>
+            </ul>
+
+            <h2>3. Saklanan Veriler ve Saklama Süreleri</h2>
+            <p>
+                Hesabınız silindiğinde kişisel verilerinizin tamamına yakını derhal silinir. Yasal yükümlülükler veya güvenlik nedenleriyle saklanması gereken veriler şunlardır:
+            </p>
+            <ul>
+                <li><strong>İşlem ve Fatura Kayıtları:</strong> Yasal finansal yükümlülükler nedeniyle satın alma geçmişi ve fatura verileri en fazla <strong>30 gün</strong> boyunca saklanır.</li>
+                <li><strong>Anonim İstatistikler:</strong> Kişisel kimliğinizle ilişkilendirilemeyen genel kullanım istatistikleri anonimleştirilerek tutulabilir.</li>
+            </ul>
+
+            <h2>4. Süreç Nasıl İşler?</h2>
+            <p>
+                E-posta ile gönderilen talepleriniz en geç <strong>7 iş günü</strong> içerisinde işleme alınır ve hesabınız kapatıldıktan sonra tarafınıza onay e-postası gönderilir.
+            </p>
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+        <div id="content-en" class="lang-en">
+            <h1>Cell Conquest - Account & Data Deletion Request</h1>
+            <p>Developer: <strong>Dravex Studio</strong></p>
+            
+            <p>
+                If you wish to delete your account and all associated data in <strong>Cell Conquest</strong>, you can submit a deletion request via email.
+            </p>
+
+            <h2>1. How to Submit an Account Deletion Request?</h2>
+            <div class="highlight-box">
+                <p>To request the deletion of your account and associated data:</p>
+                <p>Please send an email from your registered email address to <strong><a href="mailto:ahmetkemal608@gmail.com">ahmetkemal608@gmail.com</a></strong> with the subject line <em>"Account Deletion Request"</em>.</p>
+                <p>In your email, please specify your username or the email address associated with your app account.</p>
+            </div>
+
+            <h2>2. Types of Data Deleted</h2>
+            <p>Upon approval of your account deletion request, the following data will be permanently removed from our systems:</p>
+            <ul>
+                <li>User profile information (Name, Surname, Username, Email address)</li>
+                <li>OAuth authentication tokens (Google / Facebook / Apple sign-in data)</li>
+                <li>In-app activity, saved progress, and user preferences</li>
+                <li>Profile picture and uploaded user content</li>
+            </ul>
+
+            <h2>3. Data Retained and Retention Period</h2>
+            <p>
+                When your account is deleted, almost all of your personal data is removed immediately. Certain limited data may be retained temporarily for legal or security reasons:
+            </p>
+            <ul>
+                <li><strong>Transaction & Billing Records:</strong> Due to legal and financial obligations, purchase history and billing data are retained for up to <strong>30 days</strong>.</li>
+                <li><strong>Anonymized Logs:</strong> Non-personally identifiable usage statistics may be retained for analytical purposes.</li>
+            </ul>
+
+            <h2>4. Processing Time</h2>
+            <p>
+                Requests sent via email will be processed within <strong>7 business days</strong>, and a confirmation email will be sent once your account has been deleted.
+            </p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT DİL DEĞİŞTİRME MANTIĞI -->
+    <script>
+        function setLanguage(lang) {
+            const contentTr = document.getElementById('content-tr');
+            const contentEn = document.getElementById('content-en');
+            const btnTr = document.getElementById('btn-tr');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'tr') {
+                contentTr.style.display = 'block';
+                contentEn.style.display = 'none';
+                btnTr.classList.add('active');
+                btnEn.classList.remove('active');
+                document.documentElement.lang = 'tr';
+            } else {
+                contentTr.style.display = 'none';
+                contentEn.style.display = 'block';
+                btnEn.classList.add('active');
+                btnTr.classList.remove('active');
+                document.documentElement.lang = 'en';
+            }
+        }
+    </script>
+</body>
+</html>
